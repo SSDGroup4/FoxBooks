@@ -1,4 +1,24 @@
-# FoxBooks
-NCI, SSD Project, Group 4, Emilia Haraszczuk &amp; Glen Donnelly
+# README
 
-The aim of this project is to develop a system where users can easily navigate through the best selection of books available online.
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
