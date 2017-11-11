@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FoxBooks</title>
+    <title><%= yield(:title) %> | FoxBooks</title>
+    <!--<title>FoxBooks</title>-->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header'%>
+    <div id='container'>
+      <div id='content'>
+        <p class="notice"><%= flash[:notice] %></p>
+       <%= yield %>
+      </div>
+    </div>
+    <%= render 'layouts/footer'%> 
   </body>
 </html>
