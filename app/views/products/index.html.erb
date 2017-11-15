@@ -1,6 +1,52 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Books catalog</h1>
+
+<br>
+<table class="catalog">
+  <%@products.each do |product| %>
+  <tr>
+    <td>
+      <div class="image">
+        <%= link_to (image_tag product.image_url, :style => "height:100px"), product %>
+      </div>
+    </td>
+    <td>
+      <div class="title">
+        <%= link_to product.title, product %>
+      </div>
+      <div class="author">
+        <%= link_to product.author, product %>
+      </div>
+      <div class="price">
+         Price: <%= number_to_currency(product.price, :unit => "€") %>
+      </div>
+      <br>
+      <div class="description">
+        <%= product.description %>
+      </div>  
+      <br>
+      <div class="links">
+        <% if session[:login] == 1 %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% else %>
+          <%= link_to 'View details',  product %>
+          <a href="/cart/<%= product.id %>">Add to Cart</a>
+        <% end %>
+    </div>
+    <br>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<% if session[:login] == 1 %>
+  <p><%= link_to 'New book', new_product_path %></p>
+<% end %>
+
+<% if false %>
+this is a commented code!!! : )
 
 <table>
   <thead>
@@ -37,5 +83,8 @@
 </table>
 
 <br>
+- end comented code!!!!
+<% end %>
+
 
 <%= link_to 'New Product', new_product_path %>

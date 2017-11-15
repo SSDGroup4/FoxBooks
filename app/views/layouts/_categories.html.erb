@@ -1,0 +1,19 @@
+<h1>Categories</h1>
+<br>
+
+<table class="catalog">
+    
+    <% @categories.each do  |category| %>
+    <tr>
+        <td> 
+        <div class="category">
+            <h2><%= category.name %></h2>
+            
+            <p><%= image_tag category.image_url, :style => "height:100px" %></p>
+            <p><%= category.description %></p>
+        </div>
+        </td>
+        
+    </tr>
+    <% end %>
+</table>
