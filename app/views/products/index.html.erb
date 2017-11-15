@@ -27,7 +27,7 @@
       </div>  
       <br>
       <div class="links">
-        <% if session[:login] == 1 %>
+        <% if user_signed_in? %>
           <%= link_to 'Edit', edit_product_path(product) %>
           <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% else %>
@@ -41,7 +41,7 @@
   <% end %>
 </table>
 
-<% if session[:login] == 1 %>
+<% if user_signed_in? %>
   <p><%= link_to 'New book', new_product_path %></p>
 <% end %>
 

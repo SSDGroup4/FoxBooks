@@ -9,6 +9,11 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.2'
 gem 'bootstrap-sass', '3.3.7'
+#below - to remove? not needed?
+gem 'bootstrap-will_paginate'
+gem 'jquery-rails', '4.1.1'
+gem 'twitter-bootstrap-rails'
+
 # Use Puma as the app server
 gem 'puma', '3.9.1'
 # Use SCSS for stylesheets
@@ -17,7 +22,7 @@ gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'devise', '4.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

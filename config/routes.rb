@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   get 'cart/index'
 
   resources :products
@@ -20,13 +21,17 @@ Rails.application.routes.draw do
   get 'products/index'
   get 'categories/index'
   
-  get '/Admin' => 'user#admin_login'
-  get 'logout' => 'user#logout'
+  #get '/Admin' => 'user#admin_login'
+  #get 'logout' => 'user#logout'
+  get '/admin', to: 'user#admin_login'
+  get '/logout', to: 'user#logout'
   
   get '/cart' => 'cart#index'
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
   get '/cart/remove/:id' => 'cart#remove'
+  
+  #root :to => 'site#home'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
