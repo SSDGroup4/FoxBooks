@@ -13,11 +13,11 @@
 <br>
 <p>Please <%= link_to 'login',products_path %> or <%= link_to 'sign up',products_path %></p>
 
-<p> here should be an welcome image  : ) </p>
+
 <%= render 'layouts/categories' %>
 
-<h2>Catalog</h2>
-<br>
+
+
 <table class="catalog">
   <% @products.each do |product| %>
       <tr>
